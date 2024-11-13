@@ -10,6 +10,14 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'tipos',
+    loadChildren: () => import('./shared/components/tipos/tipos.module').then( m => m.TiposPageModule)
+  },
+  {
+    path: 'contato',
+    loadChildren: () => import('./shared/components/contato/contato.module').then( m => m.ContatoPageModule)
   }
 ];
 
